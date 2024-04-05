@@ -4,8 +4,7 @@
 JuliaProject/
 │
 ├── src/
-│   ├── Cell.jl
-│   └── DataLoading.jl
+│   ├── CellModel.jl
 └── test/
     └── runtests.jl
 │
@@ -22,6 +21,15 @@ using .CellModel: Cell
 using CSV, DataFrames, Dates
 # Assume using .CellModel is now unnecessary since we're in the same file/module context
 
+# Function to check if the CSV file is not empty
+function check_file_not_empty(filepath::String)
+    if filesize(filepath) > 0
+        println("The CSV file is not empty.")
+    else
+        error("The CSV file is empty.")
+    end
+end
+
 # Function to load and process data from CSV
 function load_and_process_data(filepath::String)
     df = CSV.read(filepath, DataFrame)
@@ -31,6 +39,9 @@ end
 
 # Path to the uploaded CSV file
 filepath = "cells.csv"
+
+# Check if the file is not empty
+check_file_not_empty(filepath)
 
 # Load and process the data
 cells = load_and_process_data(filepath)
@@ -50,11 +61,15 @@ for i in 1:min(length(cells),100)
 #    println("display_size: ", cell.display_size, ", type: ", typeof(cell.display_size)) #r"(\d+(\.\d+)?)\s*inches
 #    println("display_resolution: ",cell.display_resolution) #no changes needed
 #    println("features_sensors: ",cell.features_sensors) # occursin(r"^\d+(\.\d+)?$", sensor_str)
-     println("platform_os: ",cell.platform_os)
+#     println("platform_os: ",cell.platform_os)
      println()
 end
 
 println("Starting test: ")
 # Include and run tests
-#include("test/runtests.jl")
-
+try
+ 
+    include("test/runtests.jl")
+catch e
+    show(e)
+end

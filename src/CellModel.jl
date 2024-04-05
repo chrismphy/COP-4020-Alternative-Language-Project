@@ -36,14 +36,12 @@ mutable struct Cell
 end
 
 function default_parser(value::Union{AbstractString, Missing})
-    if ismissing(value) || isnothing(value)
+    if ismissing(value) || value == "-" || value == ""
         return nothing
     else
-        return value == "-" ? nothing : value
+        return value
     end
 end
-
-
 
 function parse_launch_announced(launch_str::Union{String, Missing, Nothing})
     if ismissing(launch_str) || isnothing(launch_str)
@@ -54,9 +52,8 @@ function parse_launch_announced(launch_str::Union{String, Missing, Nothing})
     end
 end
 
-
 function parse_launch_status(status_str::Union{String, Missing, Nothing})
-    if ismissing(status_str) || isnothing(status_str)
+    if ismissing(status_str) || isnothing(status_str) || status_str == "" || status_str == "-"
         return nothing
     elseif status_str == "Discontinued" || status_str == "Cancelled"
         return status_str
@@ -66,19 +63,17 @@ function parse_launch_status(status_str::Union{String, Missing, Nothing})
         return isnothing(match_result) ? status_str : parse(Int, match_result.match)
     end
 end
- 
 
 function parse_body_weight(weight_str::Union{String, Missing, Nothing})
     if ismissing(weight_str) || isnothing(weight_str)
         return nothing
     end
-
     match_result = match(r"(\d+(\.\d+)?)\s*g", weight_str)
     return isnothing(match_result) ? nothing : parse(Float64, match_result.captures[1])
 end
 
 function parse_body_sim(sim_str::Union{String, Missing, Nothing})
-    if ismissing(sim_str)
+    if ismissing(sim_str)  || sim_str == ""
         println("Missing value encountered for body_sim")
         return nothing
     elseif isnothing(sim_str) || sim_str == "No" || sim_str == "Yes"
@@ -88,9 +83,8 @@ function parse_body_sim(sim_str::Union{String, Missing, Nothing})
     end
 end
 
-
 function parse_display_size(size_str::Union{String, Missing, Nothing})
-    if ismissing(size_str) || isnothing(size_str)
+    if ismissing(size_str) || isnothing(size_str) || size_str == ""
         return nothing
     end
 
@@ -99,7 +93,7 @@ function parse_display_size(size_str::Union{String, Missing, Nothing})
 end
 
 function parse_features_sensors(sensor_str::Union{String, Missing, Nothing})
-    if ismissing(sensor_str) || isnothing(sensor_str)
+    if ismissing(sensor_str) || isnothing(sensor_str) || sensor_str == ""
         return nothing
     end
 
@@ -110,19 +104,24 @@ function parse_features_sensors(sensor_str::Union{String, Missing, Nothing})
 end
 
 function parse_platform_os(os_str::Union{String, Missing, Nothing})
-    if ismissing(os_str) || isnothing(os_str)
+    # Check if the input is missing, nothing, or empty
+    if ismissing(os_str) || isnothing(os_str) || os_str == ""
         return nothing
     end
 
-    # Check if the string contains only numbers (integer or decimal)
-    is_numeric_only = occursin(r"^\d+(\.\d+)?$", os_str)
-    if is_numeric_only
+    # Check if the string looks like a version number followed by anything else
+    is_version_like = occursin(r"^\d+(\.\d+)?,.*$", os_str)
+    if is_version_like
         return nothing
     end
-
+    if occursin(r"^\d+(\.\d+)?$", os_str)
+        return nothing
+    end
+    # Extract everything up to the first comma if present
     comma_index = findfirst(',', os_str)
     return isnothing(comma_index) ? os_str : strip(os_str[1:comma_index - 1])
 end
+
 
 
 
