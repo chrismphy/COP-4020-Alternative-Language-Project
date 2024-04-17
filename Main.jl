@@ -155,10 +155,11 @@ println("What company (oem) has the highest average weight of the phone body?")
 println(highest_average_weight(cells))
 
 println("Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.")
-print(find_announced_released_year_difference(cells))
+find_announced_released_year_difference(cells)
 
 println("How many phones have only one feature sensor?")
 println(count_single_feature_sensor(cells))
+
 
 println("What year had the most phones launched in any year later than 1999?")
 println(most_phones_launched_post_1999(cells))
