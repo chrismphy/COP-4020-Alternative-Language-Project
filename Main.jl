@@ -20,8 +20,7 @@ using .CellModel: Cell, parse_launch_announced, parse_launch_status
 
 
 using CSV, DataFrames, Dates, Statistics
-# Assume using .CellModel is now unnecessary since we're in the same file/module context
-
+ 
 # Function to check if the CSV file is not empty
 function check_file_not_empty(filepath::String)
     if filesize(filepath) > 0
