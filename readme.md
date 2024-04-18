@@ -15,7 +15,7 @@ Pkg.instantiate()
 ```   
 
 3. 
-You can run the Main.jl by typing in the terminal. Keep in mind that if you are running on Repl.it, this process will take several minutes:  
+You can run the Main.jl by typing this in the terminal. Keep in mind that if you are running on Repl.it, this process will take several minutes:  
 ```
 include("Main.jl")  
 ```
