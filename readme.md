@@ -28,11 +28,7 @@ File Injestion:
 - Julie can handle file ingestion through built-in functions such as open,read, writen and close. It can also use the CSV package, which is used to read and write to CSV files efficiently. For more complex data manipulation during the process of injesting data, I used the DataFrames package to store data in a table-like structure. 
 
 Conditional Statements: 
-- Julia supports all typical conditional statements such as If-else   statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement below:
-
-released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status 
-
-- If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
+- Julia supports all typical conditional statements such as If-else   statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement: 'released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status'. If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
 
 
 Assignment Statements: 
