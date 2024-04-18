@@ -66,7 +66,8 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 Q5: Answer the following questions (and provide a corresponding screen showing output answering them):
 
 =#
-![Q5 Results](image.png)
+![Q5 Results](https://github.com/chrismphy/COP-4020-Alternative-Language-Project/blob/main/image.png)
+
 
 #=
 What company (oem) has the highest average weight of the phone body?
@@ -90,8 +91,7 @@ What year had the most phones launched in any year later than 1999?
 
 =#
 
-
-![Q5 Results](image.PNG)
+ 
 #Data Injgestion and Cleaning
 #== 
 For part 1, we will replace each missing/empty, or '-' values with 'nothing'. In Julia, many functions and operations are designed to handle 'nothing' quite well, and it is used to represent null values. 
