@@ -1,11 +1,21 @@
 
 # Project Setup
 
-To set up the project environment, run the following commands in the Julia REPL:
+1. 
+Open your terminal and type julia to open REPL.
+2. 
+To set up the project environment, run the following commands in the Julia REPL:  
 
-using Pkg
-Pkg.activate(".")
-Pkg.instantiate()
+using Pkg     
+
+Pkg.activate(".")     
+
+Pkg.instantiate()    
+
+3. 
+You can run the Main.jl by typing in the terminal:  
+
+include("Main.jl")  
 
 
 # Q1: Which programming language and version did you pick?
