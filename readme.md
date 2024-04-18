@@ -14,7 +14,7 @@ Pkg.activate(".")
 Pkg.instantiate()    
 
 3. 
-You can run the Main.jl by typing in the terminal:  
+You can run the Main.jl by typing in the terminal. Keep in mind that if you are running on Repl.it, this process will take several minutes:  
 
 include("Main.jl")  
 
@@ -26,7 +26,7 @@ include("Main.jl")
 
 # Q2: Why did you pick this programming language?
 
-- I picked Julia as my programming language, as I believe it is the perfect language for data science. I find the language extremely intuitive, and in some cases more intuitive than python. Julia is also faster than Python, when python is used without optimization and vector computing using cython and numpy. As I have originally used R for data science during my math degree for its ease of use, I eventually chose Python because R is extremely slow, and will likely use Julia for any solo data science related project, as it has performance gains range from 10x-30x over python. Julia also has GPU support, multiple dispatch, distributed and parallel computing support, and interoperation with other programming languages such as C and Java.  Throughout the project I found Julia syntax easier to use than Python, especially when defining sets for variables in mutable structures(example : oem::Union{String, Nothing}, here oem variable can be either type string or nothing). However, the only disadvantage that was glaring with Julia is it a victim of its young age. In particular, there are not many packages and libraries available for Julia as there are for Python, and debugging Julia could be slightly difficult given that it is a young language with much less support than Python. 
+- I picked Julia as my programming language, as I believe it is the perfect language for data science. I find the language extremely intuitive, and in some cases more intuitive than Python. Julia is also faster than Python when Python is used without optimization and vector computing using cython and NumPy. As I have originally used R for data science during my math degree for its ease of use, I eventually chose Python because R is extremely slow, and will likely use Julia for any solo data science related project, as it has performance gains range from 10x-30x over Python. Julia also has GPU support, multiple dispatch, distributed and parallel computing support, and interoperation with other programming languages such as C and Java.  Throughout the project I found Julia syntax easier to use than Python, especially when defining sets for variables in mutable structures(example : oem::Union{String, Nothing}, here oem variable can be either type string or nothing). However, the only disadvantage that was glaring with Julia is it a victim of its young age. In particular, there are not many packages and libraries available for Julia as there are for Python, and debugging Julia could be slightly difficult given that it is a young language with less support than Python. 
 
 
 
@@ -39,12 +39,12 @@ File Injestion:
 - Julie can handle file ingestion through built-in functions such as open,read, writen and close. It can also use the CSV package, which is used to read and write to CSV files efficiently. For more complex data manipulation during the process of injesting data, I used the DataFrames package to store data in a table-like structure. 
 
 Conditional Statements: 
-- Julia supports all typical conditional statements such as If-else   statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement: 'released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status'. If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
+- Julia supports all typical conditional statements such as If-else statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement 'released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status', if the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
 
 
 Assignment Statements: 
 
-- Julia has a relatively straightforward approach to handling assignment statements, with some interesting features tailored for data manipulation and computing. Julia handles a basic assignment using the '=' operator. Julia allows multiple assignments in a single statement. For example a,b= 5,10 assigns 5 to a and 10 to b. A somewhat unique feature is how Julia  supports destructuring or unpacking assignments such as the following: [a,b,c]=[10,20,30], implies a=10,b=20,c=30. Julia also supports increment and update assignments in the same way as python. For example x +=1 implies we increment x by 1, and x*=2 implies we multiply x by 2 and assign the result to x. Another unique approach in Julia is found when rebinging constants. For example, in Julia, const does not mean that a variable's value cannot change. It means the variable's type cannot change. This is different from C and Java. This features is intended to help speed performance by allowing the compiler to make assumptions about the types but still provide some flexibility in how the constants can be used.  
+- Julia has a relatively straightforward approach to handling assignment statements, with some interesting features tailored for data manipulation and computing. Julia handles a basic assignment using the '=' operator. Julia allows multiple assignments in a single statement. For example a,b= 5,10 assigns 5 to a and 10 to b. A somewhat unique feature is how Julia supports destructuring or unpacking assignments such as the following: [a,b,c]=[10,20,30], implies a=10,b=20,c=30. Julia also supports increment and update assignments in the same way as python. For example x +=1 implies we increment x by 1, and x*=2 implies we multiply x by 2 and assign the result to x. Another unique approach in Julia is found when rebinding constants. For example, in Julia, 'const' does not mean that a variable's value cannot change. It means the variable's type cannot change. This is different from C and Java. This features is intended to help speed performance by allowing the compiler to make assumptions about the types but still provide some flexibility in how the constants can be used.  
 
 Loops: 
 
