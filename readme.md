@@ -66,7 +66,7 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 Q5: Answer the following questions (and provide a corresponding screen showing output answering them):
 
 =#
-![Alt text](image.png)
+![Q5 Results](image.png)
 
 #=
 What company (oem) has the highest average weight of the phone body?
