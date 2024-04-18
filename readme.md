@@ -65,36 +65,22 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 
 <img src="./image.png" alt="Q5 Results" width="600"/>
 
-
-
-
-
 What company (oem) has the highest average weight of the phone body?
-("HP", 453.6)
+- ("HP", 453.6)
 
 Was there any phones that were announced in one year and released in another? What are they? Give me the oem and models.
 
-OEM: Motorola, Model: One Hyper, Announced: 2019, Released: 2020
-OEM: Motorola, Model: Razr 2019, Announced: 2019, Released: 2020
-OEM: Xiaomi, Model: Redmi K30 5G, Announced: 2019, Released: 2020
-OEM: Xiaomi, Model: Mi Mix Alpha, Announced: 2019, Released: 2020
+- OEM: Motorola, Model: One Hyper, Announced: 2019, Released: 2020
+- OEM: Motorola, Model: Razr 2019, Announced: 2019, Released: 2020
+- OEM: Xiaomi, Model: Redmi K30 5G, Announced: 2019, Released: 2020
+- OEM: Xiaomi, Model: Mi Mix Alpha, Announced: 2019, Released: 2020
 
 How many phones have only one feature sensor?
 
-432
+- 432
 
 What year had the most phones launched in any year later than 1999? 
 
-2019 => 304
+- 2019 => 304
 
-
-#Data Injgestion and Cleaning
-
-For part 1, we will replace each missing/empty, or '-' values with 'nothing'. In Julia, many functions and operations are designed to handle 'nothing' quite well, and it is used to represent null values. 
-
-Checklist (before running actual test):
-OEM column: works as intended (nothing is invalid here)
-Model column: works as intended (nothing is invalid here)
-launch_announced: works as intended (any string of year xxxx replaces the entire string)
-launch_status: works as intended
-body_dimensions: works as intended, just check for missing or values containing '-', output everything else. 
+ 
