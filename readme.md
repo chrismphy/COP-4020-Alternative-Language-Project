@@ -10,15 +10,12 @@ Pkg.instantiate()
 
 # Q1: Which programming language and version did you pick?
 
-julia
-I picked Julia (v "1.10.2") as my programming language. 
+- I picked Julia (v "1.10.2") as my programming language. 
 
 
 # Q2: Why did you pick this programming language?
 
-I picked Julia as my programming language, as I believe it is the perfect language for data science. I find the language extremely intuitive, and in some cases more intuitive than python. Julia is also faster than Python, when python is used without optimization and vector computing using cython and numpy. As I have originally used R for data science during my math degree for its ease of use, I eventually chose Python because R is extremely slow, and will likely use Julia for any solo data science related project, as it has performance gains range from 10x-30x over python. Julia also has GPU support, multiple dispatch, distributed and parallel computing support, and interoperation with other programming languages such as C and Java. 
-
-Throughout the project I found Julia syntax easier to use than Python, especially when defining sets for variables in mutable structures(example : oem::Union{String, Nothing}, here oem variable can be either type string or nothing). However, the only disadvantage that was glaring with Julia is it a victim of its young age. In particular, there are not many packages and libraries available for Julia as there are for Python, and debugging Julia could be slightly difficult given that it is a young language with much less support than Python. 
+- I picked Julia as my programming language, as I believe it is the perfect language for data science. I find the language extremely intuitive, and in some cases more intuitive than python. Julia is also faster than Python, when python is used without optimization and vector computing using cython and numpy. As I have originally used R for data science during my math degree for its ease of use, I eventually chose Python because R is extremely slow, and will likely use Julia for any solo data science related project, as it has performance gains range from 10x-30x over python. Julia also has GPU support, multiple dispatch, distributed and parallel computing support, and interoperation with other programming languages such as C and Java.  Throughout the project I found Julia syntax easier to use than Python, especially when defining sets for variables in mutable structures(example : oem::Union{String, Nothing}, here oem variable can be either type string or nothing). However, the only disadvantage that was glaring with Julia is it a victim of its young age. In particular, there are not many packages and libraries available for Julia as there are for Python, and debugging Julia could be slightly difficult given that it is a young language with much less support than Python. 
 
 
 
