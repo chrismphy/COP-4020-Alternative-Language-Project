@@ -1,9 +1,10 @@
 
 # Project Setup
 
-1. 
+1.   
 Open your terminal and type julia to open REPL.
-2. 
+
+2.   
 To set up the project environment, run the following commands in the Julia REPL:  
 
 using Pkg     
