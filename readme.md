@@ -32,7 +32,7 @@ Conditional Statements:
 
 released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status 
 
--If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
+- If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
 
 
 Assignment Statements: 
