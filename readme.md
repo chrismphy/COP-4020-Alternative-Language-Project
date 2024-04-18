@@ -66,7 +66,7 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 Q5: Answer the following questions (and provide a corresponding screen showing output answering them):
 
 =#
-<img src="image.png" alt="Q5 Results" width="600"/>
+<img src="./image.png" alt="Q5 Results" width="600"/>
 
 
 
