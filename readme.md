@@ -1,17 +1,18 @@
 
-# Project Setup
+# Project Setup: Run Main.jl to calculate the solutions to the questions, and run all tests.
 
 1.   
-Open your terminal and type julia to open REPL.
+Open your terminal and type 'julia' to open REPL.
 
 2.   
 To set up the project environment, run the following commands in the Julia REPL:  
 
+```
+julia
 using Pkg     
-
 Pkg.activate(".")     
-
-Pkg.instantiate()    
+Pkg.instantiate() 
+```   
 
 3. 
 You can run the Main.jl by typing in the terminal. Keep in mind that if you are running on Repl.it, this process will take several minutes:  
@@ -83,3 +84,16 @@ What year had the most phones launched in any year later than 1999?
 - 2019 => 304
 
  
+# Testing
+
+To ensure the reliability and stability of the code, comprehensive test suites are provided in the `test/` directory. 
+
+# Running Tests
+
+To run the tests, navigate to the root directory in the Julia REPL, and execute the following below. For your convenience, running include("Main.jl") will automatically run the tests, along with the calculations for the questions:
+
+```julia
+using Test
+include("test/runtests.jl")
+
+
