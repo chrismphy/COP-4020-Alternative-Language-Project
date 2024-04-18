@@ -45,11 +45,19 @@ Assignment Statements:
 
 
 Loops: 
+In Julia, loops are handled in a similar way as Python. Julia has for and while loops. It is important to note that Julias array uses 1-based indexing (Python uses 0-based indexing). However the difference between Julia and Python is performance. Julia has JIT compilation which implies that loop execution is significantly faster compared to python, especially when handling large data sets or large numerical computations. Julia compiles loop constructs to efficient machine code in a manner similar to the C language. One important difference between Julia and Python is how it handles looping through array operations. In Python, we use libraries like NumPy to optimize via vectorization. However, Julia automatically optimizes many looping constructs to be as fast as most vectorized code due to its compiler. 
+
 
 Subprograms:
 
+ In terms of how Julia handles functions, Julia let's you specify the types of the parameters explicitly when defining functions. For example in our project we have the following parse function: 
+ 
+  function parse_platform_os(os_str::Union  {String, Missing, Nothing})  
+  end
 
+ Here, Union{String, Missing, Nothing}) implies that the function can handle inputs that are either a String, Missing (missing data), or Nothing (analogous to null in Python).
 
+ Julia also has the ability of multiple dispatch, where we define multiple methods for the same function based on different argument types. 
 
 Q4: List out 3 libraries you used from your programming language (if applicable) and explain what they are, why you chose them and what you used them for.
 
@@ -57,6 +65,10 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 
 Q5: Answer the following questions (and provide a corresponding screen showing output answering them):
 
+=#
+![Alt text](image.png)
+
+#=
 What company (oem) has the highest average weight of the phone body?
 ("HP", 453.6)
 
