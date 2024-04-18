@@ -22,15 +22,15 @@ Pkg.instantiate()
 # Q3: How does your programming language chosen handles: object-oriented programming, file ingestion, conditional statements, assignment statements, loops, subprograms (functions/methods), unit testing and exception handling. If one or more of these are not supported by your programming language, indicate it as so. 
 
 OOP:
-- Julia doesn't have traditional classes and objects that are present in other langauges such as Java and Python. However, it does have a powerful and flexible type system that effectively supports complex data structuring and behavior encapsulation, similar to OOP. In this project, for example, I've defined a 'mutable struct Cell', which functions similarly to a class. It encapsulates data related to a cell phone, with attributes shown inside of the csv file. Julia also supports constructors, which are used here to initialize instances of Cell. For example, the constructor function Cell(row::DataFrameRow) is specifically designed to take a row from a DataFrame, read from the CSV file, then parse and assign it to the fiels of a Cell instance. 
+-Julia doesn't have traditional classes and objects that are present in other langauges such as Java and Python. However, it does have a powerful and flexible type system that effectively supports complex data structuring and behavior encapsulation, similar to OOP. In this project, for example, I've defined a 'mutable struct Cell', which functions similarly to a class. It encapsulates data related to a cell phone, with attributes shown inside of the csv file. Julia also supports constructors, which are used here to initialize instances of Cell. For example, the constructor function Cell(row::DataFrameRow) is specifically designed to take a row from a DataFrame, read from the CSV file, then parse and assign it to the fiels of a Cell instance. 
 
 File Injestion:
-- Julie can handle file ingestion through built-in functions such as open,read, writen and close. It can also use the CSV package, which is used to read and write to CSV files efficiently. For more complex data manipulation during the process of injesting data, I used the DataFrames package to store data in a table-like structure. 
+-Julie can handle file ingestion through built-in functions such as open,read, writen and close. It can also use the CSV package, which is used to read and write to CSV files efficiently. For more complex data manipulation during the process of injesting data, I used the DataFrames package to store data in a table-like structure. 
 
 Conditional Statements: 
-- Julia supports all typical conditional statements such as If-else   statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement below:
- released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status 
- If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
+-Julia supports all typical conditional statements such as If-else   statements (if, elseif, else, etc), as well as the ternary operator '?:', which is a shorthand for if-else conditions. For example, for the following statement below:
+released_year = isa(cell.launch_status, String) ? nothing : cell.launch_status 
+If the value of launch_status is a string, then set it to nothing. Else, set it to cell.launch_status. 
 
 
 Assignment Statements: 
