@@ -41,11 +41,8 @@ Loops:
 
 Subprograms:
 
-- In terms of how Julia handles functions, Julia let's you specify the types of the parameters explicitly when defining functions. For example in our project we have the following parse function: 
-function parse_platform_os(os_str::Union  {String, Missing, Nothing})  
-end
-
-Here, Union{String, Missing, Nothing}) implies that the function can handle inputs that are either a String, Missing (missing data), or Nothing (analogous to null in Python). Julia also has the ability of multiple dispatch, where we define multiple methods for the same function based on different argument types. 
+- In terms of how Julia handles functions, Julia let's you specify the types of the parameters explicitly when defining functions. For example in our project we have the following parse function: 'function parse_platform_os(os_str::Union  {String, Missing, Nothing}) end'.
+Here, Union{String, Missing, Nothing} implies that the function can handle inputs that are either a String, Missing (missing data), or Nothing (analogous to null in Python). Julia also has the ability of multiple dispatch, where we define multiple methods for the same function based on different argument types. 
 
 # Q4: List out 3 libraries you used from your programming language (if applicable) and explain what they are, why you chose them and what you used them for.
 
