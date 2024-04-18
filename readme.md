@@ -91,7 +91,7 @@ What year had the most phones launched in any year later than 1999?
 =#
 
 
-![Q5 Results](image.png)
+![Q5 Results](image.PNG)
 #Data Injgestion and Cleaning
 #== 
 For part 1, we will replace each missing/empty, or '-' values with 'nothing'. In Julia, many functions and operations are designed to handle 'nothing' quite well, and it is used to represent null values. 
