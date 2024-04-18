@@ -16,9 +16,9 @@ Pkg.instantiate()
 
 3. 
 You can run the Main.jl by typing in the terminal. Keep in mind that if you are running on Repl.it, this process will take several minutes:  
-
+```
 include("Main.jl")  
-
+```
 
 # Q1: Which programming language and version did you pick?
 
@@ -95,5 +95,5 @@ To run the tests, navigate to the root directory in the Julia REPL, and execute 
 ```julia
 using Test
 include("test/runtests.jl")
-
+```
 
