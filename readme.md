@@ -66,7 +66,7 @@ I used four libraries: 'CSV', 'DataFrames', and 'Statistics'. I used CSV to hand
 Q5: Answer the following questions (and provide a corresponding screen showing output answering them):
 
 =#
-![Q5 Results](https://raw.githubusercontent.com/chrismphy/COP-4020-Alternative-Language-Project/main/image.png)
+![Q5 Results](./image.png)
 
 
 
